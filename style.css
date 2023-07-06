@@ -87,7 +87,7 @@ content: '\x';
     letter-spacing: 1px;
 }
 
-nav ul {
+nav ul.nav-ul {
     background: #1b1b1b;
     height: 100%;
     width: 100%;
@@ -100,17 +100,17 @@ ul {
     padding-left: 0 !important;
 }
 
-nav ul li {
+nav ul.nav-ul li {
 
     line-height: 60px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav ul li:last-child {
+nav ul.nav-ul li:last-child {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-nav ul li a {
+nav ul.nav-ul li a {
     color: var(--bs-white);
     text-decoration: none;
     font-size: 18px;
@@ -122,39 +122,39 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a:hover {
+nav ul.nav-ul li a:hover {
     color: var(--bs-cyan);
     background: #1b1b1b;
     border-left-color: var(--bs-cyan);
 }
 
 
-nav ul ul {
+nav ul.nav-ul ul {
     display: none;
     position: static;
 }
 
-nav ul .feat-show.show {
+nav ul.nav-ul .feat-show.show {
     display: block;
 }
 
-nav ul .serv-show.show {
+nav ul.nav-ul .serv-show.show {
     display: block;
 }
 
-nav ul ul li {
+nav ul.nav-ul ul li {
     line-height: 42px;
     border-bottom: none;
 
 }
 
-nav ul ul li a {
+nav ul.nav-ul ul li a {
     font-size: 17px;
     color: #e6e6e6;
     padding-left: 80px;
 }
 
-nav ul ul li a:hover {
+nav ul.nav-ul ul li a:hover {
     color: var(--bs-cyan);
     background: #1e1e1e;
     border-left-color: transparent;
@@ -162,7 +162,7 @@ nav ul ul li a:hover {
 
 
 /* arrow and hover effect */
-nav ul li a i {
+nav ul.nav-ul li a i {
     position: absolute;
     top: 50%;
     right: 20px;
@@ -171,7 +171,7 @@ nav ul li a i {
     transition: transform 0.4s;
 }
 
-nav ul li a i.rotate {
+nav ul.nav-ul li a i.rotate {
     transform: translateY(-50%) rotate(-180deg);
 
 }
