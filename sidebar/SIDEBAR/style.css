@@ -1,0 +1,182 @@
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+    --bs-font-large: 40px;
+    --bs-font-medium: 25px;
+    --bs-font-small: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    /* user-select: none; */
+
+    box-sizing: border-box;
+    font-family: var(--bs-font-sans-serif);
+
+}
+
+.sidebar {
+    position: fixed;
+    width: 31%;
+    height: 100%;
+    left: -31%;
+    background: #1b1b1b;
+    transition: left 0.4s ease;
+
+}
+.sidebar.show{
+   left: 0; 
+}
+
+.ham-btn {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    background: #1b1b1b;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+.ham-btn.click{
+  
+    left: 28%;
+}
+
+
+.ham-btn i {
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+.ham-btn.click i::before{
+content: '\x';
+}
+.sidebar .text {
+    color: var(--bs-white);
+    font-size: var(--bs-font-medium);
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    background: #FCB800;
+    letter-spacing: 1px;
+}
+
+nav ul.nav-ul {
+    background: #FCB800;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+
+}
+
+ol,
+ul {
+    padding-left: 0 !important;
+}
+
+nav ul.nav-ul li {
+
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul.nav-ul li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav ul.nav-ul li a {
+    color: var(--bs-white);
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+    position: relative;
+}
+
+nav ul.nav-ul li a:hover {
+    background-color: #000;
+    color: #FFF;
+    transition: 0.5s;
+}
+
+
+nav ul.nav-ul ul {
+    display: none;
+    position: static;
+}
+
+nav ul.nav-ul .serv-show.show,nav ul.nav-ul .feat-show.show {
+    display: block;
+}
+
+
+
+nav ul.nav-ul .serv-show.hide ,nav ul.nav-ul .feat-show.hide {
+    display: none;
+}
+
+
+nav ul.nav-ul ul li {
+    line-height: 42px;
+    border-bottom: none;
+
+}
+
+nav ul.nav-ul ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+}
+
+nav ul.nav-ul ul li a:hover {
+    color: var(--bs-cyan);
+    background: #1e1e1e;
+    border-left-color: transparent;
+}
+
+
+/* arrow and hover effect */
+nav ul.nav-ul li a i {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s;
+}
+
+nav ul.nav-ul li a i.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+
+}
